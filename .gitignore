@@ -1,0 +1,6 @@
+*.bak
+old-index-root.html.bak
+old-images-root.bak/
+.git-broken/
+.git-broken2/
+.git-old-*/
