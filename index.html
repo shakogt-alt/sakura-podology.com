@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ka">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -366,13 +366,13 @@
 <body>
 
 <div class="lang-switch" role="group" aria-label="Language / Език / ენა">
-  <button data-lang="ru" class="active">RU</button>
+  <button data-lang="ru">RU</button>
   <button data-lang="en">EN</button>
-  <button data-lang="ka">GE</button>
+  <button data-lang="ka" class="active">GE</button>
 </div>
 
 <!-- ============ RUSSIAN ============ -->
-<div class="site active" id="site-ru" lang="ru">
+<div class="site" id="site-ru" lang="ru">
 
   <header class="top">
     <div class="utility-bar">
@@ -2258,7 +2258,7 @@
 </div>
 
 <!-- ============ GEORGIAN ============ -->
-<div class="site" id="site-ka" lang="ka">
+<div class="site active" id="site-ka" lang="ka">
 
   <header class="top">
     <div class="utility-bar">
@@ -3218,7 +3218,7 @@
   (function(){
     var saved;
     try{ saved = localStorage.getItem('sakura-lang'); }catch(e){}
-    if(saved && ['ru','en','ka'].indexOf(saved) !== -1){ setLang(saved); }
+    if(saved && ['ru','en','ka'].indexOf(saved) !== -1){ setLang(saved); } else { setLang('ka'); }
   })();
 
   document.addEventListener('click', function(e){
